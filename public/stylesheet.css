@@ -1,0 +1,209 @@
+/* Reset some default margin and padding */
+html, body, h1, h2, p, div, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/images/imageb.jpg') center/cover no-repeat; /* Replace with your image path */
+  opacity: 0.5; /* Adjust the opacity as needed */
+  pointer-events: none; /* Prevent the background image from blocking interactions */
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #555;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.text-box {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.text-box:hover {
+  transform: scale(1.05);
+}
+
+textarea {
+  height: 200px;
+  width: 100%;
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.submit-button {
+  background-color: #ef5b25;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #d64d21;
+}
+
+.submit-button:disabled {
+  background-color: #ef5b25;
+  color: #ffffff;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.cta-section {
+  background-color: #f2f2f2;
+  padding: 40px;
+}
+
+.cta-content {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cta-text {
+  flex-basis: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.cta-content img {
+  max-height: 200px;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text-box {
+    width: 100%;
+  }
+}
+
+/* Add these styles for the switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Add these styles for dark mode */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Add these styles for light mode */
+.light-mode {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark-mode h1 {
+  color: #fff; /* Set the h1 color to white in dark mode */
+}
+
+.dark-mode p {
+  color: #fff;
+  font-weight: bold;
+}
+
